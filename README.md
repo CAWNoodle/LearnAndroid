@@ -1,0 +1,2 @@
+# LearnAndroid
+The main reason for this project is in the title. I wanted to learn (or ***re-learn*** really) Android Studio. It has been a few years since I last made any android apps, and I needed to familiarize myself with the process again. It turns out there have been a lot of changes. It seems they made many of the more complex tasks simpler, but at the cost of making fairly simple tasks a bit more complicated.
