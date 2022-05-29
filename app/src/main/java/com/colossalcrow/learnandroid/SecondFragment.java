@@ -33,8 +33,10 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Integer count = SecondFragmentArgs.fromBundle(getArguments()).getMyArg();
-        String countText = getString(R.string.random_heading, count);
+        DataBlob myBlob = SecondFragmentArgs.fromBundle(getArguments()).getMyArg();
+        Integer count = myBlob.randCeil;
+        String myName = myBlob.nameStr;
+        String countText = getString(R.string.random_heading, myName, count);
         TextView headerView = view.getRootView().findViewById(R.id.textview_header);
         headerView.setText(countText);
 

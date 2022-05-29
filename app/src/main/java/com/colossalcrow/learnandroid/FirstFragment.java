@@ -35,7 +35,9 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 int curCount = Integer.parseInt(binding.textviewFirst.getText().toString());
-                FirstFragmentDirections.ActionFirstFragmentToSecondFragment action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(curCount);
+                String name = binding.inputText.getText().toString();
+                DataBlob myBlob = new DataBlob(curCount, name);
+                FirstFragmentDirections.ActionFirstFragmentToSecondFragment action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(myBlob);
                 NavHostFragment.findNavController(FirstFragment.this).navigate(action);
             }
         });
